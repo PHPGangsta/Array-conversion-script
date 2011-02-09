@@ -1,0 +1,60 @@
+Output of arraytest.php:
+
+
+Daniel: compress 0.20435309410095s
+Daniel: decompress 4.2123250961304s
+Patrick: compress 0.26151013374329s
+Patrick: decompress 0.12508797645569s
+smares: decompress 2.4500229358673s
+chuckySTAR: compress 2.9559180736542s
+chuckySTAR: decompress 2.966365814209s
+frank: compress 0.26582193374634s
+frank: decompress 2.2957379817963s
+Paloran: compress 0.27442693710327s
+FEHLER ENTDECKT!
+Paloran: decompress 0.057201147079468s
+
+Notice: Undefined offset: 9997 in xxx\array\tobias.php on line 24
+
+Call Stack:
+ 1.0216    4230408   1. {main}() xxx\array\arraytest.php:0
+ 17.2085   10518392   2. convertToShort() xxx\array\arraytest.php:129
+
+Tobias: compress 0.20951414108276s
+Tobias: decompress 0.082808971405029s
+Lena: compress 0.036716938018799s
+Lena: decompress 24.867579936981s
+Martin: compress 0.42344903945923s
+Martin: decompress 4.6502149105072s
+Artem: compress 0.29201507568359s
+Artem: decompress 0.22520685195923s
+Oliver1: compress 0.25025010108948s
+Oliver1: decompress 0.27711606025696s
+Oliver2: compress 0.029865026473999s
+Oliver2: decompress 0.046755075454712s
+Wasrun: compress 0.12910604476929s
+Wasrun: decompress 0.11100196838379s
+Duke: compress 0.072591066360474s
+Duke: decompress 0.050880193710327s
+Max: compress 0.023221969604492s
+FEHLER ENTDECKT!
+Max: decompress 0.044473171234131s
+FEHLER ENTDECKT!
+Uwe: compress 0.063987016677856s
+Uwe: decompress 2.3344440460205s
+
+Notice: Undefined offset: 29358 in xxx\array\stefan.php on line 24
+
+Call Stack:
+    1.0225    4234032   1. {main}() xxx\array\arraytest.php:0
+   51.1222   10967856   2. a2a() xxx\array\arraytest.php:339
+
+Notice: Undefined offset: 29358 in xxx\array\stefan.php on line 28
+
+Call Stack:
+    1.0225    4234032   1. {main}() xxx\array\arraytest.php:0
+   51.1222   10967856   2. a2a() xxx\array\arraytest.php:339
+
+Stefan: compress 0.05174994468689s
+FEHLER ENTDECKT!
+Stefan: decompress 0.15846419334412s
