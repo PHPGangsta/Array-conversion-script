@@ -1,5 +1,3 @@
-Output of arraytest.php:
-
 
 Daniel: compress 0.20435309410095s
 Daniel: decompress 4.2123250961304s
@@ -13,13 +11,6 @@ frank: decompress 2.2957379817963s
 Paloran: compress 0.27442693710327s
 FEHLER ENTDECKT!
 Paloran: decompress 0.057201147079468s
-
-Notice: Undefined offset: 9997 in xxx\array\tobias.php on line 24
-
-Call Stack:
- 1.0216    4230408   1. {main}() xxx\array\arraytest.php:0
- 17.2085   10518392   2. convertToShort() xxx\array\arraytest.php:129
-
 Tobias: compress 0.20951414108276s
 Tobias: decompress 0.082808971405029s
 Lena: compress 0.036716938018799s
@@ -58,3 +49,5 @@ Call Stack:
 Stefan: compress 0.05174994468689s
 FEHLER ENTDECKT!
 Stefan: decompress 0.15846419334412s
+Sebastian: compress 0.1811089515686s
+Sebastian: decompress 2.4608881473541s
