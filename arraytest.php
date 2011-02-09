@@ -80,6 +80,28 @@ if ($numbers != $origNumbers) {
 }
 
 
+// ===== Phil  https://gist.github.com/815294 =======
+include 'phil.php';
+$numbers = $origNumbers;
+$start = microtime(true);
+$compressed = en($numbers);
+$end = microtime(true);
+echo "Phil: compress ".($end-$start)."s\n";
+if ($compressed != $origCompressed) {
+    echo "FEHLER ENTDECKT!\n";
+}
+
+$numbers = $origCompressed;
+$start = microtime(true);
+$decompressed = de($numbers);
+$end = microtime(true);
+echo "Phil: decompress ".($end-$start)."s\n";
+if ($decompressed != $origNumbers) {
+    echo "FEHLER ENTDECKT!\n";
+}
+
+
+
 // ===== frank  http://pastie.org/1538632 =======
 include 'frank.php';
 $numbers = $origNumbers;
