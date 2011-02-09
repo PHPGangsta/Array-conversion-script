@@ -373,3 +373,24 @@ echo "Stefan: decompress ".($end-$start)."s\n";
 if ($decompressed != $origNumbers) {
     echo "FEHLER ENTDECKT!\n";
 }
+
+
+// ===== Sebastian Bruckner  http://pastie.org/1544779 =======
+include 'sebastian.php';
+$numbers = $origNumbers;
+$start = microtime(true);
+$compressed = shortenArray($numbers);
+$end = microtime(true);
+echo "Sebastian: compress ".($end-$start)."s\n";
+if ($compressed != $origCompressed) {
+    echo "FEHLER ENTDECKT!\n";
+}
+
+$numbers = $origCompressed;
+$start = microtime(true);
+$decompressed = unshortenArray($numbers);
+$end = microtime(true);
+echo "Sebastian: decompress ".($end-$start)."s\n";
+if ($decompressed != $origNumbers) {
+    echo "FEHLER ENTDECKT!\n";
+}
