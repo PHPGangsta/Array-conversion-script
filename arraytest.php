@@ -312,7 +312,7 @@ if ($decompressed != $origNumbers) {
 }
 
 
-// ===== max  http://pastie.org/1541048 =======
+// ===== max  http://pastie.org/1547043 http://pastie.org/1541048 =======
 include 'max.php';
 $numbers = $origNumbers;
 $start = microtime(true);
@@ -354,7 +354,7 @@ if ($decompressed != $origNumbers) {
 }
 
 
-// ===== Stefan Gaudes  http://pastie.org/1543912 =======
+// ===== Stefan Gaudes  http://www.pastie.org/1548059 =======
 include 'stefan.php';
 $numbers = $origNumbers;
 $start = microtime(true);

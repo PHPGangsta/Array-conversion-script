@@ -1,28 +1,41 @@
 <?php
 
 function max_compress($a) {
-    $cnt = count($a);
-    for ($i = 2; $i < $cnt; $i++) {
-        $pre = $a[$i - 2];
-        if (
-            ($pre + 2 == $a[$i] || $pre - 2 == $a[$i])
-            && ($pre + 1 == $a[$i - 1] || $pre - 1 == $a[$i - 1])
-        ) { // found a range
-            while ($i + 1 < $cnt && ($a[$i - 1] + 2 == $a[$i + 1] || $a[$i - 1] - 2 == $a[$i + 1])) {
-                $i++;
-            }
-            $ret[] = $pre . '-' . $a[$i];
-            $i += 2;
-        } else {
-            $ret[] = $pre;
+  $cnt = count($a);
+  $nxt = $a[0];
+  for($i=1; $i < $cnt; $i++) {
+    $pre = $nxt;
+    $nxt = $a[$i];
+    if (($pre+1 == $nxt || $pre-1 == $nxt)) { //found a range
+      //current range: $pre-$nxt - try to expand
+      if (++$i < $cnt) { //not at the end of the array
+        $start = $pre;
+        $pre = $nxt;
+        $nxt = $a[$i];
+        //reach end of array or reach range limit
+        while (($pre+1 == $nxt || $pre-1 == $nxt)) { // search end of range/array
+          if (++$i < $cnt) { //range is good
+            $pre = $nxt;
+            $nxt = $a[$i];
+          } else { //reached end of array
+            $ret[] = $start.'-'.$nxt;
+            return $ret;
+          }
         }
+        $ret[] = $start.'-'.$pre;
+      } else { //reached end of array.
+        $ret[] = $pre.'-'.$nxt;
+        return $ret;
+      }
+    } else { //just a single element
+      $ret[] = $pre;
     }
-    // handle last two elements..
-    for ($cnt += 2; $i < $cnt; $i++) {
-        $ret[] = $a[$i - 2];
-    }
-    return $ret;
+  }
+  //handle last element - just add it
+  $ret[] = $nxt;
+  return $ret;
 }
+
 
 function max_decompress($a) {
     $b = array();
