@@ -22,7 +22,7 @@ Artem: compress 0.29701495170593s
 Artem: decompress 0.22398996353149s
 Oliver1: compress 0.2545440196991s
 Oliver1: decompress 0.27919983863831s
-Oliver2: compress 0.029215097427368s
+Oliver2: compress 0.023215097427368s
 Oliver2: decompress 0.047801971435547s
 Wasrun: compress 0.13014006614685s
 Wasrun: decompress 0.11161994934082s

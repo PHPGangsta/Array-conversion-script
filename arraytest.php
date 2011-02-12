@@ -249,7 +249,7 @@ if ($decompressed != $origNumbers) {
 }
 
 
-// ===== Oliver2  http://pastie.org/1539702 =======
+// ===== Oliver2  http://pastie.org/1551446 =======
 include 'oliver2.php';
 $numbers = $origNumbers;
 $start = microtime(true);

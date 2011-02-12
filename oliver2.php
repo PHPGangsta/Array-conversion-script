@@ -18,20 +18,12 @@ function oliver2_convert_long($a)
 
 function oliver2_convert_short($a)
 {
-	$r = array();
-	$t = $l = false;
-	foreach($a AS $o)
-	{
-		if(($l+1==$o || $l-1==$o) && $l!==false) $t = $o;
-		else if($t!==false)
-		{
-			$r[count($r)-1] .= '-'.$l;
-			$t = false;
-			$r[] = $o;
-		}
-		else $r[] = $o;
-		$l = $o;
-	}
-	if($t!==false) $r[count($r)-1] .= '-'.$o;
-	return $r;
+	$i=$j=$k=1;
+	$r[]=$a[0];
+	do {
+		while(isset($a[$i])&&$a[$i-1]+1==$a[$i]) ++$i;
+		while(isset($a[$i])&&$a[$i-1]-1==$a[$i]) ++$i;
+		if($k!=$i) $r[$j-1].='-'.$a[$i-1];
+		if(isset($a[$i])) $r[$j++]=$a[$i++]; else return $r;
+	} while($k=$i);
 }
