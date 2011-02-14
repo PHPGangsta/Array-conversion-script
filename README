@@ -37,3 +37,5 @@ Stefan: compress 0.027276992797852s
 Stefan: decompress 0.090695858001709s
 Sebastian: compress 0.18792200088501s
 Sebastian: decompress 2.4671220779419s
+sprain: compress 0.1064178943634s
+sprain: decompress 0.052311897277832s
