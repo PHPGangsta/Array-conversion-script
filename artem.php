@@ -1,4 +1,4 @@
-<?
+<?php
 function reduce($numbers) {
 	$return = array();
 	while(false !== ($start = $startCopy = current($numbers))) {		

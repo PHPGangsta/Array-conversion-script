@@ -1,4 +1,4 @@
-<?
+<?php
 
 function group($numbers){
 	$range = 0;

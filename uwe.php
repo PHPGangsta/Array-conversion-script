@@ -1,4 +1,4 @@
-<?
+<?php
 
 function array_convert($array) {
     if (!is_array($array)) {

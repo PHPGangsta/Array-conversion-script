@@ -1,4 +1,4 @@
-<?
+<?php
 
 function convertToShort($data) {
 	$ret = array();

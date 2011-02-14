@@ -1,4 +1,5 @@
-<?
+<?php
+
 function en(array $a)
 {
     $b = array($a[0]);
